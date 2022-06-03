@@ -17,11 +17,11 @@ public class BabyObserver implements DefaultLifecycleObserver {
 
     private ActivityResultRegistry registry;
     private Activity activity = null;
-    Listener listener;
+    BabyResult babyResult;
     ActivityResultCallback<ActivityResult> callback = new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
-            listener.onActivityResult(result.getResultCode(), result.getData());
+            babyResult.onActivityResult(result.getResultCode(), result.getData());
         }
     };
     private ActivityResultLauncher<Intent> intentLauncher;
@@ -48,14 +48,14 @@ public class BabyObserver implements DefaultLifecycleObserver {
         intentLauncher = registry.register("babykey", owner, new ActivityResultContracts.StartActivityForResult(), callback);
     }
 
-    public void startIntent(Class<?> cls, Listener listener) {
-        this.listener = listener;
+    public void startIntent(Class<?> cls, BabyResult babyResult) {
+        this.babyResult = babyResult;
         Intent intent = new Intent(activity, cls);
         intentLauncher.launch(intent);
     }
 
-    public void startIntent(Intent intent, Listener listener) {
-        this.listener = listener;
+    public void startIntent(Intent intent, BabyResult babyResult) {
+        this.babyResult = babyResult;
         intentLauncher.launch(intent);
     }
 }

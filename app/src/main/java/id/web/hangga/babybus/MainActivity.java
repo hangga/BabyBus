@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import io.github.hangga.babybus.BabyBus;
-import io.github.hangga.babybus.Listener;
+import io.github.hangga.babybus.BabyResult;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                babyBus.startActivityForResult(ModalActivity.class, new Listener() {
+                babyBus.startActivityForResult(ModalActivity.class, new BabyResult() {
                     @Override
                     public void onActivityResult(int resultCode, Intent data) {
                         if (resultCode == RESULT_OK){

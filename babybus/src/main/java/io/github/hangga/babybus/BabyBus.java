@@ -19,11 +19,11 @@ public class BabyBus {
         fragment.getLifecycle().addObserver(observer);
     }
 
-    public void startActivityForResult(Class<?> cls, Listener listener){
-        observer.startIntent(cls, listener);
+    public void startActivityForResult(Class<?> cls, BabyResult babyResult){
+        observer.startIntent(cls, babyResult);
     }
 
-    public void startIntent(Intent intent, Listener listener){
-        observer.startIntent(intent, listener);
+    public void startIntent(Intent intent, BabyResult babyResult){
+        observer.startIntent(intent, babyResult);
     }
 }

@@ -5,7 +5,7 @@ plugins {
 
 group = 'id.web.hangga' // <-- group name
 archivesBaseName = "babybus" // <-- artifact name
-version = "0.0.2-beta0"
+version = "1.0.0"
 
 publishing {
 
