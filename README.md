@@ -19,3 +19,55 @@ dependencies {
     implementation 'id.web.hangga:babybus:1.0.0' // Please check ☝️ latest version
 }
 ```
+
+## How to Use
+### Initialize
+Initialize on onCreate Activity or Fragment.
+
+```kotlin
+BabyBus babyBus = new BabyBus(this);
+```
+### Call Intent and get CallBack.
+- Using startActivityForResult.
+```kotlin
+babyBus.startActivityForResult(ModalActivity.class, new BabyResult() {
+    @Override
+    public void onActivityResult(int resultCode, Intent data) {
+        if (resultCode == RESULT_OK){
+			String nama = data.getStringExtra("nama");
+			String alamat = data.getStringExtra("alamat");
+			String phone = data.getStringExtra("phone");
+        }
+    }
+});
+```
+
+- Using startIntent.
+```kotlin
+Intent i = new Intent(MainActivity.this, ModalActivity.class);
+i.putExtra("id_type", "PASSPORT");
+
+babyBus.startIntent(i, new BabyResult() {
+    @Override
+    public void onActivityResult(int resultCode, Intent data) {
+        if (resultCode == RESULT_OK){
+			String nama = data.getStringExtra("nama");
+			String alamat = data.getStringExtra("alamat");
+			String phone = data.getStringExtra("phone");
+			
+        }
+    }
+});
+```
+
+#### Put Return Data.   
+You can put parameter on ModalActivity when finish action.
+
+```kotlin
+Intent intent = getIntent();
+intent.putExtra("nama", edtNama.getText().toString());
+intent.putExtra("alamat", edtAlamat.getText().toString());
+intent.putExtra("phone", edtTelp.getText().toString());
+setResult(RESULT_OK, intent);
+finish();
+```
