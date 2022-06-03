@@ -10,7 +10,7 @@
 ## Setup
 #### 1. Add this repository.
 ```groovy
-maven{url '[https://repo.repsy.io/mvn/kredibel/sdk](https://repo.repsy.io/mvn/hangga/repo)'}
+maven{url 'https://repo.repsy.io/mvn/hangga/repo'}
 ```
 
 #### 2. Add this dependency to gradle script on app module. 👉 <a href="https://github.com/hangga/BabyBus/releases">[Latest release]</a>
