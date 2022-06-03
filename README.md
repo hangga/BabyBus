@@ -34,9 +34,7 @@ babyBus.startActivityForResult(ModalActivity.class, new BabyResult() {
     @Override
     public void onActivityResult(int resultCode, Intent data) {
         if (resultCode == RESULT_OK){
-		String nama = data.getStringExtra("nama");
-		String alamat = data.getStringExtra("alamat");
-		String phone = data.getStringExtra("phone");
+	  // do something
         }
     }
 });
@@ -51,9 +49,7 @@ babyBus.startIntent(i, new BabyResult() {
     @Override
     public void onActivityResult(int resultCode, Intent data) {
         if (resultCode == RESULT_OK){
-		String nama = data.getStringExtra("nama");
-		String alamat = data.getStringExtra("alamat");
-		String phone = data.getStringExtra("phone");	
+	  // do something	
         }
     }
 });
