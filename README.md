@@ -22,13 +22,18 @@ dependencies {
 
 ## How to Use
 ### Initialize
-Initialize on onCreate Activity or Fragment.
-
+Initialize on onCreate Activity or Fragment.<br/><br/>
+![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
 BabyBus babyBus = new BabyBus(this);
 ```
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+var babyBus = BabyBus(this)
+```
 ### Call Intent and get CallBack.
-- Using startActivityForResult.
+#### Using startActivityForResult.
+![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 babyBus.startActivityForResult(ModalActivity.class, new BabyResult() {
     @Override
@@ -39,8 +44,16 @@ babyBus.startActivityForResult(ModalActivity.class, new BabyResult() {
     }
 });
 ```
-
-- Using startIntent.
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+babyBus!!.startActivityForResult(ModalActivity::class.java, { i, data ->
+    if (i == RESULT_OK) {
+        // do something
+    }
+})
+```
+#### Using startIntent.
+![java](https://img.shields.io/badge/-Java-%23B07119)  
 ```kotlin
 Intent i = new Intent(MainActivity.this, ModalActivity.class);
 i.putExtra("id_type", "PASSPORT");
@@ -54,10 +67,18 @@ babyBus.startIntent(i, new BabyResult() {
     }
 });
 ```
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+babyBus!!.startIntent(intent, { i, data ->
+    if (i == RESULT_OK) {
+        // do something
+    }
+})
+```
 
 #### Put Return Data.   
-You can put parameter on ModalActivity when finish action.
-
+You can put parameter on ModalActivity when finish action.<br/><br/>
+![java](https://img.shields.io/badge/-Java-%23B07119)
 ```kotlin
 Intent intent = getIntent();
 intent.putExtra("nama", edtNama.getText().toString());
@@ -65,4 +86,13 @@ intent.putExtra("alamat", edtAlamat.getText().toString());
 intent.putExtra("phone", edtTelp.getText().toString());
 setResult(RESULT_OK, intent);
 finish();
+```
+![kotlin](https://img.shields.io/badge/-Kotlin-%23BA00BB)
+```kotlin
+val intent = intent
+intent.putExtra("nama", edtNama.text.toString())
+intent.putExtra("alamat", edtAlamat.text.toString())
+intent.putExtra("phone", edtTelp.text.toString())
+setResult(RESULT_OK, intent)
+finish()
 ```
