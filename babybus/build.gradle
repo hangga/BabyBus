@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish' // <-- Plugin Maven Publish
+}
+
+group = 'id.web.hangga' // <-- group name
+archivesBaseName = "babybus" // <-- artifact name
+version = "0.0.2-beta0"
+
+publishing {
+
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
+
+    publications {
+        aar(MavenPublication) {
+            groupId group
+            artifactId archivesBaseName
+            version project.version
+            artifact("$buildDir/outputs/aar/${archivesBaseName}-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            url properties.getProperty("mavenUrl", "")
+            credentials {
+                username properties.getProperty("mavenUser", "")
+                password properties.getProperty("mavenPassword", "")
+            }
+        }
+    }
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        minSdk 19
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
