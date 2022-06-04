@@ -4,6 +4,10 @@
 </h1>
 <p align="center">Let's simplify our minds like babies.<br/>Easy way of getting a result from an activity without complicated and rambling 😄<br/></p>
 
+
+<a target="_blank" href="https://twitter.com/intent/tweet?text=YOUR-TITLE&url=https://github.com/hangga/BabyBus&via=TWITTER-HANDLE">Tweet</a><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/hangga/BabyBus">Share on Facebook</a><a target="_blank" href="https://plus.google.com/share?url=https://github.com/hangga/BabyBus">Plus on Google+</a><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/hangga/BabyBus&title=YOUR-TITLE&summary=YOUR-SUMMARY&source=https://github.com/hangga/BabyBus">Share on LinkedIn</a><a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://github.com/hangga/BabyBus&description=YOUR-DESCRIPTION&media=YOUR-IMAGE-SRC">Pin on Pinterest</a><a target="_blank" href="https://vk.com/share.php?url=https://github.com/hangga/BabyBus&title=YOUR-TITLE&description=YOUR-DESCRIPTION&image=YOUR-IMAGE-SRC&noparse=true">Share on VK</a><a target="_blank" href="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=https://github.com/hangga/BabyBus">Share on Xing</a><a target="_blank" href="http://www.tumblr.com/share/link?url=https://github.com/hangga/BabyBus&description=YOUR-DESCRIPTION">Share on Tumblr</a><a target="_blank" href="http://www.reddit.com/submit?url=YOUR_URL&title=YOUR_TITLE">Share on Reddit</a>
+
+
 ### Support API Level
 ![minsdk](https://img.shields.io/badge/Min%20SDK-API%2024-%233DDC84?logo=android) ![targetsdk](https://img.shields.io/badge/Max%20Support-API%2031-%233DDC84?logo=android)
 
