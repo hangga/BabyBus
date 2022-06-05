@@ -1,5 +1,5 @@
 <h1 align="center"> 
-    <img width="150" src="https://github.com/hangga/BabyBus/blob/main/babybus/baby-icon.png?raw=true"/><br/>
+    <img width="100" src="https://github.com/hangga/BabyBus/blob/main/babybus/baby-icon.png?raw=true"/><br/>
     BabyBus
 </h1>
 <p align="center">Let's simplify our minds like babies.<br/>Easy way of getting a result from an activity without complicated and rambling 😄<br/>
