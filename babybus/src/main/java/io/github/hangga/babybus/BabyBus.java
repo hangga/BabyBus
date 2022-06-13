@@ -10,13 +10,17 @@ public class BabyBus {
     private BabyBus(){}
 
     public BabyBus(AppCompatActivity activity){
-        observer = new BabyObserver(activity);
-        activity.getLifecycle().addObserver(observer);
+        if (activity != null) {
+            observer = new BabyObserver(activity);
+            activity.getLifecycle().addObserver(observer);
+        }
     }
 
     public BabyBus(Fragment fragment){
-        observer = new BabyObserver(fragment);
-        fragment.getLifecycle().addObserver(observer);
+        if (fragment != null) {
+            observer = new BabyObserver(fragment);
+            fragment.getLifecycle().addObserver(observer);
+        }
     }
 
     public void startActivityForResult(Class<?> cls, BabyResult babyResult){
