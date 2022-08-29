@@ -5,7 +5,7 @@ plugins {
 
 group = 'id.web.hangga' // <-- group name
 archivesBaseName = "babybus" // <-- artifact name
-version = "1.0.2"
+version = "1.0.4"
 
 publishing {
 
@@ -58,7 +58,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.6.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
